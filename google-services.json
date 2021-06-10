@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "99471299250",
+    "project_id": "ionic-claro-poc",
+    "storage_bucket": "ionic-claro-poc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99471299250:android:f5e72af2156a77947defab",
+        "android_client_info": {
+          "package_name": "com.claro.poc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99471299250-484cepkqd539cn6gidt4v94ctcqkajsf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGe-X6g1P7JImL4NEX0rvcmnrXAKJALhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99471299250-484cepkqd539cn6gidt4v94ctcqkajsf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
