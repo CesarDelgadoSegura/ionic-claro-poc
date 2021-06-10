@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'auth/change/password',
-    loadChildren: () => import('./auth/change-password/change-password.module').then( m => m.ChangePasswordModule)
+    loadChildren: () => import('./auth/change-password/change-password.module').then( m => m.ChangePasswordPageModule)
   }
 ];
 
