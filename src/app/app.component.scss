@@ -50,15 +50,19 @@ ion-menu.md ion-item {
 }
 
 ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  --background:#d62826;
 }
 
 ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color:#d62826;
 }
 
 ion-menu.md ion-item ion-icon {
-  color: #616e7e;
+  color:#d62826;
+}
+
+ion-icon{
+margin-right:10px;
 }
 
 ion-menu.md ion-item ion-label {

@@ -1,0 +1,22 @@
+ion-header,
+ion-toolbar{
+  --background:#d62826;
+  color:#FFFFFF;
+}
+
+ion-button{
+  --background:#d62826;
+  border:none;
+  --box-shadow:none;
+}
+
+ion-content{
+--background:#F2F2F2;
+--padding-top:40%;
+}
+
+ion-img{
+  max-width:210px;
+  margin:auto;
+  padding-top:80px;
+}
