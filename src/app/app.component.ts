@@ -6,15 +6,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Home', url: '/folder/Inbox', icon: 'home' },
-    { title: 'Avisos', url: '/folder/Outbox', icon: 'notifications' },
-    { title: 'Guardias', url: '/folder/Favorites', icon: 'calendar' },
-    { title: 'Alarmas', url: '/folder/Archived', icon: 'alarm' },
-    { title: 'SES', url: '/folder/Trash', icon: 'calendar' },
+    { title: 'Home', url: '/', icon: 'home' },
+    { title: 'Avisos', url: '/', icon: 'notifications' },
+    { title: 'Guardias', url: '/', icon: 'calendar' },
+    { title: 'Alarmas', url: '/', icon: 'alarm' },
+    { title: 'SES', url: '/', icon: 'calendar' },
   ];
   public settingPages = [
-    { title: 'Configuración', url: '/folder/Inbox', icon: 'settings' },
-    { title: 'Cerrar Sesión', url: '/folder/Outbox', icon: 'exit' },
+    { title: 'Configuración', url: '/', icon: 'settings' },
+    { title: 'Cerrar Sesión', url: '/close/account', icon: 'exit' },
   ];
   constructor() {}
 }
