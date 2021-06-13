@@ -4,9 +4,9 @@
       <ion-content>
         <ion-list id="inbox-list">
           <div class="ion-div">
-            <ion-label class="ion-label">JL</ion-label>
-            <ion-note class="ion-fullname">Juan Lopez</ion-note>
-            <ion-note class="ion-user">CLARO12345</ion-note>
+            <ion-label class="ion-label" [innerHTML]="user.initials"></ion-label>
+            <ion-note class="ion-fullname" [innerHTML]="user.title"></ion-note>
+            <ion-note class="ion-user" [innerHTML]="user.id"></ion-note>
           </div>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">

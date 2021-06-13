@@ -19,5 +19,8 @@ export class AppComponent {
   ];
   constructor() {
     this.user = JSON.parse(localStorage.getItem('user'));
+    const fullnameDivide = this.user.title.split(' ');
+    this.user.initials = this.user.title[0] + fullnameDivide[1][0];
+    console.log(this.user.initials);
   }
 }
