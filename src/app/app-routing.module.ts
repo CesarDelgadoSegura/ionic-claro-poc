@@ -11,9 +11,14 @@ const routes: Routes = [
     loadChildren: () => import('./auth/change-password/change-password.module').then( m => m.ChangePasswordPageModule)
   },
   {
-    path: '',
+    path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  }
+  },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

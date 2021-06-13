@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  public user = {} as any;
   public appPages = [
     { title: 'Home', url: '/home', icon: 'home' },
     { title: 'Avisos', url: '/news', icon: 'notifications' },
@@ -16,5 +17,7 @@ export class AppComponent {
     { title: 'Configuración', url: '/setting', icon: 'settings' },
     { title: 'Cerrar Sesión', url: '/close/account', icon: 'exit' },
   ];
-  constructor() {}
+  constructor() {
+    this.user = JSON.parse(localStorage.getItem('user'));
+  }
 }
