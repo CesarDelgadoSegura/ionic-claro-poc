@@ -3,6 +3,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'auth/login',
+    loadChildren: () => import('./auth/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
     path: 'auth/change/password',
     loadChildren: () => import('./auth/change-password/change-password.module').then( m => m.ChangePasswordPageModule)
   },
