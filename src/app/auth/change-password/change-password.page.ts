@@ -62,7 +62,22 @@ export class ChangePasswordPage implements OnInit{
 
     else
     {
-      this.changeSrv.changePassword(9391, this.password.new);
+      try{
+        this.changeSrv.changePassword(9391, this.password.new);
+      }catch(e){
+
+        const lSorage = localStorage.getItem('user');
+
+        if(lSorage !== null)
+        {
+          const user = JSON.parse(lSorage);
+
+          user.author = this.password.new;
+
+          localStorage.setItem('user', JSON.stringify(user));
+        }
+      }
+
       const alert = await this.alertCtrl.create({
         header: 'Notificación',
         message: 'La contraseña fue actualizada exitosamente',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuController} from '@ionic/angular';
+import {MenuController, NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +7,13 @@ import {MenuController} from '@ionic/angular';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit{
-  constructor(public menuCtrl: MenuController){}
+  constructor(public menuCtrl: MenuController, public navCtrl: NavController){
+    const lStorage = localStorage.getItem('user');
+    if(lStorage === null)
+    {
+      this.navCtrl.navigateRoot('/auth/login').finally();
+    }
+  }
   ngOnInit(){}
   ionViewWillEnter(){
     this.menuCtrl.enable(true).finally();
