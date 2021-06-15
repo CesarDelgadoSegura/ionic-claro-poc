@@ -40,7 +40,7 @@ export class ChangePasswordPage implements OnInit{
   async submit()
   {
     /** Consultamos y almacenamos la información */
-    this.changeSrv.getUserByIdPassword(9391);
+    this.changeSrv.getUserById(9391);
 
     /** Obtenemos la contraseña. */
     const user = JSON.parse(localStorage.getItem('user'));
@@ -62,6 +62,7 @@ export class ChangePasswordPage implements OnInit{
 
     else
     {
+      this.changeSrv.changePassword(9391, this.password.new);
       const alert = await this.alertCtrl.create({
         header: 'Notificación',
         message: 'La contraseña fue actualizada exitosamente',

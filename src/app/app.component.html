@@ -16,10 +16,14 @@
           </ion-menu-toggle>
         </ion-list>
         <ion-list id="labels-list">
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of settingPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon size="small" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" routerLink="/setting" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon size="small" slot="start" name="settings-outline"></ion-icon>
+              <ion-label>Configuración</ion-label>
+            </ion-item>
+            <ion-item lines="none" (click)="closeSession()">
+              <ion-icon size="small" slot="start" name="exit-outline"></ion-icon>
+              <ion-label>Cerrar Sesión</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
