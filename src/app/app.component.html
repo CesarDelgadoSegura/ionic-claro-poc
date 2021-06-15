@@ -4,7 +4,7 @@
       <ion-content>
         <ion-list id="inbox-list">
           <div class="ion-div">
-            <ion-label class="ion-label" [innerHTML]="user.initials"></ion-label>
+            <ion-label class="ion-label">{{ getInitials() }}</ion-label>
             <ion-note class="ion-fullname" [innerHTML]="user.title"></ion-note>
             <ion-note class="ion-user" [innerHTML]="user.id"></ion-note>
           </div>
@@ -20,6 +20,10 @@
             <ion-item routerDirection="root" routerLink="/setting" lines="none" detail="false" routerLinkActive="selected">
               <ion-icon size="small" slot="start" name="settings-outline"></ion-icon>
               <ion-label>Configuración</ion-label>
+            </ion-item>
+            <ion-item lines="none" routerLink="/auth/change/password">
+              <ion-icon size="small" slot="start" name="key-outline"></ion-icon>
+              <ion-label>Cambiar contraseña</ion-label>
             </ion-item>
             <ion-item lines="none" (click)="closeSession()">
               <ion-icon size="small" slot="start" name="exit-outline"></ion-icon>

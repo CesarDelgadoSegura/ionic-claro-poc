@@ -35,6 +35,13 @@ export class ChangePasswordService{
     user.author = newPassword;
 
     /** */
-    this.http.put(environment.apiUrl + `posts${userId}`, user.toString(), this.options);
+    const stringUser = JSON.stringify(user);
+
+    const result = this.http.put(environment.apiUrl + `posts/${userId}`, user, this.options).subscribe(data => {
+
+      localStorage.setItem('user', JSON.stringify(data));
+    });
+
+    return result || {};
   }
 }
