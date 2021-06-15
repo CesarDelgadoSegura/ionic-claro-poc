@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController, AlertController, NavController } from '@ionic/angular';
 import { ChangePasswordService } from './change-password.service';
-import { FCM } from "@ionic-native/fcm/ngx";
 
 @Component({
   selector: 'app-change-password',
@@ -25,14 +24,9 @@ export class ChangePasswordPage implements OnInit{
     public menuCtrl: MenuController,
     public alertCtrl: AlertController,
     public navCtrl: NavController,
-    private changeSrv: ChangePasswordService,
-    private fcm: FCM){ }
+    private changeSrv: ChangePasswordService){ }
 
-  ngOnInit(){
-    this.fcm.getToken().then(token => {
-      console.log(token);
-    });
-  }
+  ngOnInit(){}
 
   ionViewWillEnter(){
     this.menuCtrl.enable(false).finally();
